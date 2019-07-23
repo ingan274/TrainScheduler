@@ -67,7 +67,7 @@
 .timeTable {
     color: white;
     font-family: 'Noto Sans', sans-serif;
-    font-size: 15px;
+    font-size: 13px;
     font-weight: 400;
     margin: 30px auto;
     padding: 10px 20px;
@@ -79,7 +79,7 @@
 .timeTable td,
 .timeTable th {
     border: 1px solid #ddd;
-    padding: 8px;
+    padding: 10px 20px;
 }
 
 .timeTable tr:nth-child(even) {
@@ -91,12 +91,20 @@
     background-color: rgba(1, 50, 67, .5);
 }
 
-.timeTable th {
+.tableTitle {
     padding-top: 12px;
     padding-bottom: 12px;
     text-align: left;
     background-color: rgba(1, 50, 67, 1);
     color: white;
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+}
+
+.submission {
+    font-family: 'Noto Sans', sans-serif;
+    padding: 10px 10px;
+    text-align: center;
 }
 
 
