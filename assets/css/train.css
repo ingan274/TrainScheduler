@@ -40,19 +40,29 @@
 
 /* CurrentTime */
 
-.currentTime {
+.clock {
     text-align: center;
     background: rgba(1, 50, 67, .6);
     color: white;
     font-family: 'Pridi', serif;
     font-size: 80px;
     font-weight: 500;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+}
+
+.clockTitle {
+    font-size: 40px;
+    padding-top: 5px;
 }
 
 
 /* Train Display */
+
+.trainSchedule {
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
 
 .timeTable {
     color: white;
@@ -63,6 +73,7 @@
     padding: 10px 20px;
     border-collapse: collapse;
     width: 100%;
+    color: black;
 }
 
 .timeTable td,
@@ -72,11 +83,12 @@
 }
 
 .timeTable tr:nth-child(even) {
-    background-color: rgba(228, 241, 254, 1);
+    background-color: rgba(1, 50, 67, .3);
+    color: black;
 }
 
 .timeTable tr:hover {
-    background-color: rgba(107, 185, 240, 1);
+    background-color: rgba(1, 50, 67, .5);
 }
 
 .timeTable th {
@@ -90,9 +102,48 @@
 
 /* Form */
 
+.trainSubmission {
+    background: rgba(1, 50, 67, .6);
+    padding-top: 40px;
+    padding-bottom: 40px;
+}
+
+.formTitle {
+    text-align: center;
+    color: rgb(233, 247, 252);
+    font-family: 'Pridi', serif;
+    font-size: 30px;
+    font-weight: 400;
+    padding-top: 30px;
+    margin: 10px;
+}
+
+label {
+    color: white;
+    font-family: 'Noto Sans', sans-serif;
+}
+
 .form-group {
     color: rgba(1, 50, 67, 1);
     font-family: 'Noto Sans', sans-serif;
     font-size: 15px;
     font-weight: 400;
+}
+
+.btn {
+    width: 80%;
+    background: rgb(233, 247, 252);
+    color: rgba(1, 50, 67, 1);
+    margin: 10px auto;
+    font-family: 'Pridi', serif;
+    font-weight: 500;
+}
+
+.btn:hover {
+    width: 80%;
+    color: white;
+    background: rgba(1, 50, 67, 1);
+    margin: 10px auto;
+    font-family: 'Pridi', serif;
+    font-weight: 500;
 }
