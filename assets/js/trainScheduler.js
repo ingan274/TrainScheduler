@@ -21,7 +21,7 @@ $(".currentTime").text(globalCurrentTime.format("h:mm a"));
 var name;
 var destination;
 var firstTime;
-var trainFrequency;
+var frequency;
 
 // Submitting
 $("#submit-button").on("click", function () {
@@ -61,12 +61,13 @@ database.ref().on("child_added", function (snapshot) {
     $("#current-time").text(localCurrentTime.format("hh:mm a"));
 
     // Looking at train Time with Current Time
+    var frequency = submission.frequency;
     if (firstTime > localCurrentTime) {
         var nextArrivalTime = firstTime.format("hh:mm a");
         var minutesAway = firstTime.diff(localCurrentTime, "minutes");
     } else {
         var differenceInMinutes = localCurrentTime.diff(firstTime, "minutes");
-        var minutesAway = frequency - (differenceInMinutes % frequency);
+        var minutesAway = frequency-(differenceInMinutes % frequency);
 
         var nextArrival = localCurrentTime.add(minutesAway, "minutes");
         var nextArrivalHour = nextArrival.hour();
