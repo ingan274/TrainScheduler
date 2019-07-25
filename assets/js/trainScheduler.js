@@ -18,14 +18,19 @@ var globalCurrentMinutes = moment().minutes();
 var globalCurrentTime = moment(globalCurrentHour + ":" + globalCurrentMinutes, "HH:mm");
 $(".currentTime").text(globalCurrentTime.format("h:mm a"));
 
+var name;
+var destination;
+var firstTime;
+var trainFrequency;
+
 // Submitting
-$("#submit-button").on("click", function() {
+$("#submit-button").on("click", function () {
     event.preventDefault();
 
-    var name = $("#trainNameInput").val().trim();
-    var destination = $("#trainDestinationInput").val().trim();
-    var firstTime = $("#trainTimeInput").val().trim();
-    var frequency = parseInt($("#frequencyInput").val().trim());
+    name = $("#trainNameInput").val().trim();
+    destination = $("#trainDestinationInput").val().trim();
+    firstTime = $("#trainTimeInput").val().trim();
+    frequency = parseInt($("#frequencyInput").val().trim());
 
     database.ref().push({
         name: name,
@@ -41,7 +46,7 @@ $("#submit-button").on("click", function() {
 database.ref().on("child_added", function (snapshot) {
     console.log(snapshot.val());
     // making new table element for entry
-     newTrain = $("<tr>").appendTo($("#timeTable"));
+    newTrain = $("<tr>").appendTo($("#timeTable"));
 
     var submission = snapshot.val();
     var trainfirstTime = submission.firstTime;
@@ -81,7 +86,7 @@ database.ref().on("child_added", function (snapshot) {
 
     newTrain.appendTo($("#timeTable"));
 
-    
+
 
 }, function (errorObject) {
 
