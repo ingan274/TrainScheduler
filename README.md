@@ -1,5 +1,7 @@
 # Train Scheduler
 Check and add your travel plans!
+<br>
+Check out Scheduler Here: https://ingan274.github.io/TrainScheduler/
 
 # How to Use this Program
 * Enter a train name, destination, daily start time (in military time) and frequency (in minutes)
